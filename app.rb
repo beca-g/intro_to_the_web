@@ -16,8 +16,12 @@ get '/another_path' do
   "Another page"
 end
 
-get '/cat' do
-  @random_name = ["Amigo", "Oscar", "Viking"].sample
+get '/random-cat' do
+  params[:name] = ["Amigo", "Oscar", "Viking"].sample
   erb(:index)
 end 
 
+get '/named-cat' do
+  params[:name] = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
+end 
